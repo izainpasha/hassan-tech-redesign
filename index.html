@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Hassan Tech | Mechanical Keyboards & Gaming Gear in Pakistan</title>
+  <meta name="description" content="Mechanical keyboards, gaming mice, headsets and microphones from AULA, HyperX, SteelSeries, Corsair and more. Cash on delivery across Pakistan.">
+  <meta name="theme-color" content="#0a0c0f">
+  <meta property="og:title" content="Hassan Tech | Gaming Gear in Pakistan">
+  <meta property="og:description" content="Mechanical keyboards, mice, headsets and mics. Cash on delivery to 300+ cities.">
+  <meta property="og:image" content="assets/products/hero99.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="topbar">
+    <div class="wrap topbar__inner">
+      <p><span class="dot dot--live" aria-hidden="true"></span> Cash on delivery to 300+ cities</p>
+      <p class="hide-sm">Open and inspect your parcel before you pay</p>
+      <p class="hide-sm mono">WhatsApp 0349 6658003</p>
+    </div>
+  </div>
+
+  <header class="header" id="header">
+    <div class="wrap header__inner">
+      <a class="logo" href="#top" aria-label="Hassan Tech home">
+        <img src="assets/logo-current.png" alt="Hassan Tech" width="160" height="31">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#shop" data-filter-link="keyboards">Keyboards</a>
+        <a href="#shop" data-filter-link="mice">Mice</a>
+        <a href="#shop" data-filter-link="headsets">Headsets</a>
+        <a href="#shop" data-filter-link="mics">Microphones</a>
+        <a href="#preowned">Pre-owned</a>
+        <a href="#guides">Guides</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="icon-btn" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        </button>
+        <button class="icon-btn hide-sm" type="button" aria-label="Account">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
+        </button>
+        <button class="icon-btn cart" type="button" aria-label="Cart, 0 items" id="cartBtn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L20 8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+          <span class="cart__count mono" id="cartCount">0</span>
+        </button>
+        <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav" id="menuBtn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="rgb-line" aria-hidden="true"></div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__grid-bg" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow" data-hero="eyebrow"><span class="dot dot--accent" aria-hidden="true"></span> Gaming peripherals &middot; Pakistan</p>
+          <h1 class="hero__title" data-split>Pakistan&rsquo;s trusted mechanical keyboard store.</h1>
+          <p class="hero__lede" data-hero="lede">Hall effect, hot-swap and tri-mode boards, plus the mice, headsets and mics to match. Ordered today, checked at your door, paid on delivery.</p>
+          <div class="hero__ctas" data-hero="ctas">
+            <a class="btn btn--primary" href="#shop" data-filter-link="keyboards">Shop keyboards
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#preowned">See pre-owned deals</a>
+          </div>
+          <dl class="hero__stats" data-hero="stats">
+            <div><dt>Keyboards</dt><dd class="mono"><span data-count="61">61</span></dd></div>
+            <div><dt>Headsets</dt><dd class="mono"><span data-count="80">80</span></dd></div>
+            <div><dt>Mice</dt><dd class="mono"><span data-count="34">34</span></dd></div>
+            <div><dt>COD cities</dt><dd class="mono"><span data-count="300">300</span>+</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero__stage" data-hero="stage">
+          <div class="board" id="board">
+            <div class="board__screen">
+              <div class="board__screen-top mono">
+                <span>HT&middot;75 <em>2.4G</em></span>
+                <span class="board__bat" aria-hidden="true"><i></i></span>
+              </div>
+              <div class="board__type mono" aria-live="off"><span id="typed"></span><span class="caret" aria-hidden="true"></span></div>
+              <div class="board__meters mono">
+                <span>POLL <b>8000</b> Hz</span>
+                <span>ACT <b>0.40</b> mm</span>
+                <span>KEYS <b id="keyCount">0</b></span>
+              </div>
+            </div>
+            <div class="board__bar" aria-hidden="true"></div>
+            <div class="board__keys" id="keys" aria-hidden="true"></div>
+          </div>
+          <p class="board__hint mono" id="boardHint"><kbd>A</kbd> Type on your keyboard. The board follows.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section class="brands" aria-label="Brands we stock">
+      <div class="marquee" id="marquee">
+        <div class="marquee__track">
+          <span>AULA</span><span>HyperX</span><span>SteelSeries</span><span>Corsair</span><span>Razer</span><span>ATK</span><span>EWEADN</span><span>Bloody</span><span>HP</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="section" id="categories">
+      <div class="wrap">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Shop by gear</p>
+          <h2>Everything on your desk, in one place.</h2>
+        </header>
+
+        <div class="bento">
+          <a class="tile tile--xl" href="#shop" data-filter-link="keyboards" data-tile>
+            <div class="tile__text">
+              <span class="tile__count mono">61 in stock</span>
+              <h3>Mechanical keyboards</h3>
+              <p>Gasket mount, hot-swap, Hall effect. 60% to full size.</p>
+            </div>
+            <img src="assets/products/f99.webp" alt="" loading="lazy">
+          </a>
+          <a class="tile tile--tall" href="#shop" data-filter-link="headsets" data-tile>
+            <div class="tile__text">
+              <span class="tile__count mono">80 in stock</span>
+              <h3>Headsets</h3>
+            </div>
+            <img src="assets/products/nova5.jpg" alt="" loading="lazy">
+          </a>
+          <a class="tile" href="#shop" data-filter-link="mice" data-tile>
+            <div class="tile__text">
+              <span class="tile__count mono">34 in stock</span>
+              <h3>Gaming mice</h3>
+            </div>
+            <img src="assets/products/e11.webp" alt="" loading="lazy">
+          </a>
+          <a class="tile" href="#shop" data-filter-link="mics" data-tile>
+            <div class="tile__text">
+              <span class="tile__count mono">4 in stock</span>
+              <h3>Microphones</h3>
+            </div>
+            <img src="assets/products/duocast.jpg" alt="" loading="lazy">
+          </a>
+          <a class="tile tile--wide" href="#shop" data-tile>
+            <div class="tile__text">
+              <span class="tile__count mono">11 in stock</span>
+              <h3>Creator gear</h3>
+            </div>
+            <img src="assets/products/np33.jpg" alt="" loading="lazy">
+          </a>
+          <a class="tile tile--plain tile--wide tile--end" href="#shop" data-tile>
+            <div class="tile__text">
+              <span class="tile__count mono">17 in stock</span>
+              <h3>Mouse pads &amp; accessories</h3>
+              <p>Desk mats, cables, stands and spares.</p>
+            </div>
+            <span class="tile__arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section section--alt" id="shop">
+      <div class="wrap">
+        <header class="section__head section__head--row" data-reveal>
+          <div>
+            <p class="eyebrow">New this month</p>
+            <h2>Fresh on the shelf.</h2>
+          </div>
+          <div class="filters" role="tablist" aria-label="Filter products">
+            <button type="button" role="tab" class="filter is-active" aria-selected="true" data-filter="all">All</button>
+            <button type="button" role="tab" class="filter" aria-selected="false" data-filter="keyboards">Keyboards</button>
+            <button type="button" role="tab" class="filter" aria-selected="false" data-filter="mice">Mice</button>
+            <button type="button" role="tab" class="filter" aria-selected="false" data-filter="headsets">Headsets</button>
+            <button type="button" role="tab" class="filter" aria-selected="false" data-filter="mics">Mics</button>
+          </div>
+        </header>
+
+        <div class="products" id="products"></div>
+
+        <div class="products__more" data-reveal>
+          <a class="btn btn--ghost" href="#shop">Browse all 200+ products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPOTLIGHT -->
+    <section class="section spotlight" id="spotlight">
+      <div class="wrap spotlight__inner">
+        <div class="spotlight__media" data-reveal>
+          <div class="spotlight__stage">
+            <img src="assets/products/hero99.webp" alt="AULA HERO 99 HE keyboard with black and pink keycaps and an RGB light bar" loading="lazy" id="spotImg">
+          </div>
+          <ul class="spotlight__callouts mono" aria-hidden="true">
+            <li style="--x: 12%; --y: 18%">8000 Hz polling</li>
+            <li style="--x: 64%; --y: 76%">Magnetic switches</li>
+          </ul>
+        </div>
+
+        <div class="spotlight__copy" data-reveal>
+          <p class="eyebrow">Spotlight</p>
+          <h2>AULA HERO 99 HE</h2>
+          <p class="spotlight__lede">Magnetic Hall effect switches read the exact depth of every press. Set where each key fires, anywhere along its travel.</p>
+
+          <dl class="specs">
+            <div><dt>Switch</dt><dd>Hall effect, magnetic</dd></div>
+            <div><dt>Polling rate</dt><dd class="mono">8000 Hz</dd></div>
+            <div><dt>Precision</dt><dd class="mono">0.05 mm</dd></div>
+            <div><dt>Rapid Trigger</dt><dd>Yes</dd></div>
+          </dl>
+
+          <div class="actuation">
+            <div class="actuation__head">
+              <label for="actRange">Set your actuation point</label>
+              <output class="mono" id="actOut" for="actRange">0.4 mm</output>
+            </div>
+            <div class="actuation__body">
+              <div class="switch" aria-hidden="true">
+                <div class="switch__stem" id="stem"><span></span></div>
+                <div class="switch__housing"></div>
+                <div class="switch__line" id="actLine"></div>
+                <div class="switch__ref"><span class="mono">2.0 mm</span></div>
+              </div>
+              <div class="actuation__ctrl">
+                <input type="range" id="actRange" min="0.1" max="3.5" step="0.1" value="0.4">
+                <div class="actuation__scale mono" aria-hidden="true"><span>0.1</span><span>3.5 mm</span></div>
+                <p id="actNote">Hair trigger. The key fires almost as soon as you touch it. Good for FPS strafing.</p>
+                <p class="muted small">A standard mechanical switch fires at about 2.0 mm, and you can&rsquo;t change it.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="spotlight__buy">
+            <div class="price">
+              <span class="price__now mono">Rs 18,499</span>
+              <span class="price__was mono">Rs 21,999</span>
+              <span class="badge badge--deal mono">&minus;16%</span>
+            </div>
+            <button class="btn btn--primary" type="button" data-add="AULA HERO 99 HE">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRE-OWNED -->
+    <section class="section section--alt" id="preowned">
+      <div class="wrap">
+        <div class="preowned">
+          <header class="preowned__intro" data-reveal>
+            <p class="eyebrow">Open box &amp; pre-owned</p>
+            <h2>Flagship gear at half the price.</h2>
+            <p>Every returned or pre-owned item is tested before it goes back on sale. Each listing tells you exactly what you&rsquo;re getting.</p>
+            <ul class="grades">
+              <li><span class="grade grade--a mono">Unused repack</span> Never used. Brown box instead of retail packaging.</li>
+              <li><span class="grade grade--b mono">Open box</span> Slightly used, original box and accessories.</li>
+              <li><span class="grade grade--c mono">10/10, no box</span> Used, no marks or faults. Item only.</li>
+            </ul>
+          </header>
+          <div class="deals" id="deals"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REAL DESK PHOTO + TRUST -->
+    <section class="section desk" id="trust">
+      <div class="wrap">
+        <figure class="desk__photo" data-reveal>
+          <img src="assets/products/l99.jpg" alt="AULA L99 keyboard with red translucent keycaps held over a table of mechanical keyboards in stock" loading="lazy" id="deskImg">
+          <figcaption class="mono">Shot in store &middot; AULA L99 Blue Rain &middot; Rs 24,850</figcaption>
+        </figure>
+
+        <ul class="trust">
+          <li data-trust>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7"/><circle cx="6.5" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg>
+            <h3>Cash on delivery</h3>
+            <p>300+ cities, including Karachi, Lahore and Islamabad.</p>
+          </li>
+          <li data-trust>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>
+            <h3>Open before you pay</h3>
+            <p>Check the parcel at your door, then pay the rider.</p>
+          </li>
+          <li data-trust>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+            <h3>Warranty &amp; returns</h3>
+            <p>Covered by our written warranty and returns policy.</p>
+          </li>
+          <li data-trust>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+            <h3>4.5+ on Google</h3>
+            <p>Rated above 4.5 by customers over the past 12 months.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GUIDES -->
+    <section class="section" id="guides">
+      <div class="wrap">
+        <header class="section__head section__head--row" data-reveal>
+          <div>
+            <p class="eyebrow">Buying guides</p>
+            <h2>Not sure which one? Start here.</h2>
+          </div>
+          <a class="link-arrow" href="https://hassantech.pk/blog/" target="_blank" rel="noopener">All guides</a>
+        </header>
+        <div class="guides">
+          <a class="guide" href="https://hassantech.pk/mechanical-gaming-keyboards-best-gaming-keyboard-guide-in-pakistan/" target="_blank" rel="noopener" data-guide>
+            <span class="guide__meta mono">Keyboards &middot; 1 Jan 2026</span>
+            <h3>Mechanical gaming keyboards: the buying guide for Pakistan</h3>
+            <span class="guide__go" aria-hidden="true">Read</span>
+          </a>
+          <a class="guide" href="https://hassantech.pk/gaming-headset-in-pakistan-complete-guide-for-immersive-audio-competitive-play/" target="_blank" rel="noopener" data-guide>
+            <span class="guide__meta mono">Headsets &middot; 2 Jan 2026</span>
+            <h3>Gaming headsets in Pakistan: immersive audio and competitive play</h3>
+            <span class="guide__go" aria-hidden="true">Read</span>
+          </a>
+          <a class="guide" href="https://hassantech.pk/gaming-mouse-in-pakistan/" target="_blank" rel="noopener" data-guide>
+            <span class="guide__meta mono">Mice &middot; 3 Jan 2026</span>
+            <h3>Choosing a gaming mouse in Pakistan: DPI, weight and sensors</h3>
+            <span class="guide__go" aria-hidden="true">Read</span>
+          </a>
+          <a class="guide" href="https://hassantech.pk/top-5-iems-for-gaming-in-pakistan/" target="_blank" rel="noopener" data-guide>
+            <span class="guide__meta mono">Audio &middot; 24 Sep 2025</span>
+            <h3>Top 5 IEMs for gaming in Pakistan</h3>
+            <span class="guide__go" aria-hidden="true">Read</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="wrap cta__inner" data-reveal>
+        <h2>Need help picking a switch?</h2>
+        <p>Message us on WhatsApp with your budget and what you play. We reply with two or three options that fit.</p>
+        <a class="btn btn--primary" href="https://wa.me/923496658003" target="_blank" rel="noopener">Chat on WhatsApp &middot; <span class="mono">0349 6658003</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo-current.png" alt="Hassan Tech" width="180" height="35" loading="lazy">
+        <p>Mechanical keyboards and gaming gear, delivered across Pakistan.</p>
+      </div>
+      <nav class="footer__col" aria-label="Shop">
+        <h4>Shop</h4>
+        <a href="#shop">Keyboards</a>
+        <a href="#shop">Gaming mice</a>
+        <a href="#shop">Headsets</a>
+        <a href="#shop">Microphones</a>
+        <a href="#preowned">Pre-owned</a>
+      </nav>
+      <nav class="footer__col" aria-label="Help">
+        <h4>Help</h4>
+        <a href="https://hassantech.pk/refund_returns/" target="_blank" rel="noopener">Warranty &amp; returns</a>
+        <a href="https://hassantech.pk/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a>
+        <a href="https://hassantech.pk/about-hassan-tech/" target="_blank" rel="noopener">About us</a>
+        <a href="https://hassantech.pk/contact-us/" target="_blank" rel="noopener">Contact</a>
+      </nav>
+      <div class="footer__col">
+        <h4>Talk to us</h4>
+        <p class="mono">0349 6658003</p>
+        <p class="mono">Ohyeshassan@gmail.com</p>
+        <p class="muted small">Calls and WhatsApp, every day.</p>
+      </div>
+    </div>
+    <div class="wrap footer__base">
+      <p>&copy; 2026 Hassan Tech. Prices in PKR.</p>
+      <p class="muted">Redesign concept</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/923496658003" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8.8 8.6c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.1-.2.3 0 .5.4.7 1 1.4 1.7 1.9.4.3.8.5 1.2.7.2.1.4 0 .5-.1l.6-.7c.1-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.4 0 .4-.1 1-.6 1.4-.4.4-1.2.7-1.9.6-1-.2-2.4-.7-3.7-1.9-1.4-1.2-2.2-2.7-2.4-3.5-.2-.8.1-1.4.4-1.7z" fill="currentColor" stroke="none"/></svg>
+  </a>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
