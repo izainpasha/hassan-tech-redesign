@@ -19,17 +19,17 @@
   ------------------------------------------------------------------ */
   const CONDITION = { a: "Unused repack", b: "Open box", c: "10/10, no box" };
   const products = [
-    { id: "hero99",   cat: "keyboards", brand: "AULA",        name: "HERO 99 HE Hall Effect",  spec: "8000 Hz · Rapid Trigger · 0.05 mm",   now: 18499, was: 21999, img: "hero99.webp", featured: true },
+    { id: "hero99",   cat: "keyboards", brand: "AULA",        name: "HERO 99 HE Hall Effect",  spec: "8000 Hz · Rapid Trigger · 0.05 mm",   now: 18499, was: 21999, img: "hero99.webp", featured: true, needs: ["gaming"], why: "Hall effect with Rapid Trigger. The fastest response we stock." },
     { id: "a9",       cat: "mice",      brand: "ATK",         name: "VXE A9 Pro Max",          spec: "8 kHz wireless · 42,000 DPI",         now: 13999, was: 16999, img: "a9.jpg", photo: true, featured: true },
-    { id: "f75pro",   cat: "keyboards", brand: "AULA",        name: "F75 Pro Gradient Gray",   spec: "Reaper switches · 75% · Tri-mode",    now: 12799, was: 16499, img: "f75pro.webp", featured: true },
+    { id: "f75pro",   cat: "keyboards", brand: "AULA",        name: "F75 Pro Gradient Gray",   spec: "Reaper switches · 75% · Tri-mode",    now: 12799, was: 16499, img: "f75pro.webp", featured: true, needs: ["wireless", "gaming"], why: "Tri-mode wireless with fast Reaper switches." },
     { id: "e11",      cat: "mice",      brand: "EWEADN",      name: "E11 Wireless",            spec: "65 g · 12,800 DPI · Tri-mode",        now: 4450,  was: 4999,  img: "e11.webp", featured: true },
     { id: "duocast",  cat: "mics",      brand: "HyperX",      name: "DuoCast RGB",             spec: "24-bit / 96 kHz · USB condenser",     now: 13499, was: 17999, img: "duocast.jpg", featured: true },
-    { id: "l99",      cat: "keyboards", brand: "AULA",        name: "L99 Blue Rain",           spec: "3.98″ IPS screen · Tri-mode · RGB",   now: 24850, was: 32999, img: "l99.jpg", photo: true, featured: true },
+    { id: "l99",      cat: "keyboards", brand: "AULA",        name: "L99 Blue Rain",           spec: "3.98″ IPS screen · Tri-mode · RGB",   now: 24850, was: 32999, img: "l99.jpg", photo: true, featured: true, needs: ["looks", "wireless"], why: "Built-in 3.98″ screen and translucent keycaps." },
     { id: "g7pro",    cat: "headsets",  brand: "AULA",        name: "G7 Pro Wireless",         spec: "7.1 surround · BT 5.3 · RGB",         now: 8299,  was: 8999,  img: "g7pro.jpg", featured: true },
     { id: "cloud3s",  cat: "headsets",  brand: "HyperX",      name: "Cloud III S Wireless",    spec: "120 h battery · 53 mm drivers",       now: 35999, was: 39999, img: "cloud3s.jpg", featured: true, soldOut: true },
-    { id: "f99",      cat: "keyboards", brand: "AULA",        name: "F99 Pro White",           spec: "Silent · Hot-swap · Wireless",        now: 15350, was: 19000, img: "f99.webp" },
-    { id: "f87",      cat: "keyboards", brand: "AULA",        name: "F87 Wireless",            spec: "Gasket mount · Hot-swap · RGB",       now: 12999, was: 14999, img: "f87.png" },
-    { id: "apex100",  cat: "keyboards", brand: "SteelSeries", name: "Apex 100",                spec: "QuickTension switches · Blue backlight", now: 3500, was: 6000, img: "apex100.webp", cond: "c" },
+    { id: "f99",      cat: "keyboards", brand: "AULA",        name: "F99 Pro White",           spec: "Silent · Hot-swap · Wireless",        now: 15350, was: 19000, img: "f99.webp", needs: ["quiet", "wireless"], why: "Silent switches in a full layout, fully wireless." },
+    { id: "f87",      cat: "keyboards", brand: "AULA",        name: "F87 Wireless",            spec: "Gasket mount · Hot-swap · RGB",       now: 12999, was: 14999, img: "f87.png", needs: ["wireless", "quiet"], why: "Gasket mount gives a softer, quieter typing feel." },
+    { id: "apex100",  cat: "keyboards", brand: "SteelSeries", name: "Apex 100",                spec: "QuickTension switches · Blue backlight", now: 3500, was: 6000, img: "apex100.webp", cond: "c", needs: ["gaming"], why: "Budget pick, pre-owned in 10/10 condition." },
     { id: "sc620",    cat: "mice",      brand: "AULA",        name: "SC620 Wireless",          spec: "Lightweight · RGB",                   now: 4950,  was: 6000,  img: "sc620.jpg" },
     { id: "proclick", cat: "mice",      brand: "Razer",       name: "Pro Click Ergonomic",     spec: "2.4 GHz + Bluetooth",                 now: 9750,  was: 19999, img: "proclick.jpg", photo: true, cond: "c" },
     { id: "nova5",    cat: "headsets",  brand: "SteelSeries", name: "Arctis Nova 5 Wireless",  spec: "100+ game presets · 40 h battery",    now: 23999, was: 29999, img: "nova5.jpg", cond: "a" },
@@ -39,6 +39,9 @@
   const off = (p) => Math.round((1 - p.now / p.was) * 100);
 
   const plusIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>';
+  const waIcon = '<svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg>';
+  const WA = "https://wa.me/923496658003";
+  const waAsk = (p) => `${WA}?text=${encodeURIComponent(`Hi, is the ${p.brand} ${p.name} (${rs(p.now)}) available?`)}`;
 
   function mediaHTML(p) {
     const badges = [];
@@ -69,7 +72,7 @@
 
   function dealHTML(p) {
     const full = `${p.brand} ${p.name}`;
-    return `<article class="deal" data-deal>
+    return `<article class="deal glass" data-deal>
       ${mediaHTML(p)}
       <div class="deal__body">
         <span class="card__brand">${p.brand}</span>
@@ -77,7 +80,10 @@
         <div class="deal__save mono"><b>Save ${rs(p.was - p.now)}</b><span class="deal__bar" aria-hidden="true"><i style="--save:${off(p)}%"></i></span></div>
         <div class="card__foot" style="padding:0">
           <div class="price"><span class="price__now mono">${rs(p.now)}</span><span class="price__was mono">${rs(p.was)}</span></div>
-          <button class="add" type="button" data-add="${full}" aria-label="Add ${full} to cart">${plusIcon}</button>
+          <div class="pick__actions">
+            <a class="pick__wa" href="${waAsk(p)}" target="_blank" rel="noopener" aria-label="Ask about ${full} on WhatsApp">${waIcon}</a>
+            <button class="add" type="button" data-add="${full}" aria-label="Add ${full} to cart">${plusIcon}</button>
+          </div>
         </div>
       </div>
     </article>`;
@@ -86,6 +92,71 @@
   const grid = $("#products");
   grid.innerHTML = products.map(cardHTML).join("");
   $("#deals").innerHTML = products.filter((p) => p.cond).sort((a, b) => off(b) - off(a)).map(dealHTML).join("");
+
+  /* ------------------------------------------------------------------
+     Keyboard finder
+  ------------------------------------------------------------------ */
+  const finderForm = $("#finderForm");
+  const finderOut = $("#finderResults");
+  const NEED_LABEL = { gaming: "competitive gaming", wireless: "wireless", quiet: "quiet typing", looks: "looks and a screen" };
+
+  function pickHTML(p, best) {
+    const full = `${p.brand} ${p.name}`;
+    return `<article class="pick${best ? " pick--best" : ""}">
+      <div class="pick__img${p.photo ? " is-photo" : ""}"><img src="assets/products/${p.img}" alt="${full}" loading="lazy"></div>
+      <div class="pick__body">
+        ${best ? '<span class="pick__tag">Best match</span>' : ""}
+        <span class="card__brand">${p.brand}</span>
+        <h3 class="pick__name">${p.name}</h3>
+        <p class="pick__why">${p.why}</p>
+        <div class="price"><span class="price__now mono">${rs(p.now)}</span><span class="price__was mono">${rs(p.was)}</span></div>
+      </div>
+      <div class="pick__actions">
+        <a class="pick__wa" href="${waAsk(p)}" target="_blank" rel="noopener" aria-label="Ask about ${full} on WhatsApp">${waIcon}</a>
+        <button class="add" type="button" data-add="${full}" aria-label="Add ${full} to cart">${plusIcon}</button>
+      </div>
+    </article>`;
+  }
+
+  function runFinder() {
+    const [lo, hi] = finderForm.budget.value.split("-").map(Number);
+    const need = finderForm.need.value;
+    const hits = products
+      .filter((p) => p.needs && p.now >= lo && p.now < hi && p.needs.includes(need))
+      .sort((a, b) => a.needs.indexOf(need) - b.needs.indexOf(need) || b.now - a.now)
+      .slice(0, 3);
+    if (hits.length) {
+      finderOut.innerHTML = hits.map((p, i) => pickHTML(p, i === 0)).join("");
+    } else {
+      const msg = `Hi, I'm looking for a keyboard for ${NEED_LABEL[need]}. My budget is ${finderForm.querySelector("input[name=budget]:checked + label").textContent}.`;
+      finderOut.innerHTML = `<div class="finder__empty">
+        <p>Nothing in stock matches both right now. Message us and we&rsquo;ll check incoming stock for you.</p>
+        <a class="btn btn--wa" href="${WA}?text=${encodeURIComponent(msg)}" target="_blank" rel="noopener">${waIcon} Ask on WhatsApp</a>
+      </div>`;
+    }
+    if (animate) gsap.from(finderOut.children, { y: 16, opacity: 0, stagger: 0.07, duration: 0.45, ease: "power3.out", clearProps: "transform,opacity" });
+  }
+  finderForm.addEventListener("change", runFinder);
+  finderForm.addEventListener("submit", (e) => e.preventDefault());
+  runFinder();
+
+  /* ------------------------------------------------------------------
+     FAQ accordion (animated <details>)
+  ------------------------------------------------------------------ */
+  $$("[data-qa]").forEach((d) => {
+    const sum = $("summary", d);
+    const body = $(".qa__a", d);
+    sum.addEventListener("click", (e) => {
+      if (!animate) return;
+      e.preventDefault();
+      if (d.open) {
+        gsap.to(body, { height: 0, duration: 0.35, ease: "power2.inOut", onComplete: () => { d.open = false; gsap.set(body, { clearProps: "height" }); } });
+      } else {
+        d.open = true;
+        gsap.from(body, { height: 0, duration: 0.45, ease: "power3.out", clearProps: "height" });
+      }
+    });
+  });
 
   /* ------------------------------------------------------------------
      Filters (GSAP Flip)
@@ -359,6 +430,23 @@
   batchIn($$("[data-deal]"));
   batchIn($$("[data-trust]"));
   batchIn($$("[data-guide]"));
+  batchIn($$("[data-step]"));
+  batchIn($$("[data-qa]"));
+
+  // Step connector draws across, numbers pop in sequence
+  gsap.from(".step__n", {
+    scale: 0, duration: 0.6, stagger: 0.25, ease: "back.out(2.4)", clearProps: "transform",
+    scrollTrigger: { trigger: ".steps", start: "top 85%", once: true }
+  });
+
+  // WhatsApp label slides out once, then tucks away
+  const waLabel = $("#waLabel");
+  gsap.timeline({ delay: 4 })
+    .to(waLabel, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" })
+    .to(waLabel, { opacity: 0, x: 12, duration: 0.4, ease: "power2.in" }, "+=5");
+  const waFloat = $(".wa-float");
+  waFloat.addEventListener("mouseenter", () => gsap.to(waLabel, { opacity: 1, x: 0, duration: 0.3, overwrite: true }));
+  waFloat.addEventListener("mouseleave", () => gsap.to(waLabel, { opacity: 0, x: 12, duration: 0.3, overwrite: true }));
 
   // Category images drift in from the corner
   $$("[data-tile] img").forEach((img) => {

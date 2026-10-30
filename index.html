@@ -11,10 +11,43 @@
   <meta property="og:image" content="assets/products/hero99.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=Manrope:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "OnlineStore",
+        "name": "Hassan Tech",
+        "url": "https://hassantech.pk/",
+        "logo": "https://hassantech.pk/wp-content/uploads/2023/07/Hassan-Tech_logo_5.png",
+        "telephone": "+92-349-6658003",
+        "email": "Ohyeshassan@gmail.com",
+        "areaServed": "PK",
+        "currenciesAccepted": "PKR",
+        "paymentAccepted": "Cash on delivery"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Do you offer cash on delivery?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We deliver with cash on delivery to more than 300 cities in Pakistan, including Karachi, Lahore and Islamabad." } },
+          { "@type": "Question", "name": "Can I check the product before I pay?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Open the parcel and inspect it in front of the rider. Pay only once you're happy with it." } },
+          { "@type": "Question", "name": "How long does delivery take?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your city. Send your city on WhatsApp and we'll tell you when to expect it." } },
+          { "@type": "Question", "name": "What do open box and 10/10, no box mean?", "acceptedAnswer": { "@type": "Answer", "text": "Open box items are slightly used and come with their original box and accessories. 10/10, no box means used with no marks or faults, sold as the item only. Unused repacks are new items in a plain brown box." } },
+          { "@type": "Question", "name": "Is there a warranty?", "acceptedAnswer": { "@type": "Answer", "text": "Products are covered by our warranty and returns policy. Terms vary by product, so ask us if you want to confirm before ordering." } },
+          { "@type": "Question", "name": "Can you help me pick between two keyboards?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Send both names on WhatsApp with what you play and how much you type, and we'll tell you which one fits better." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2A9.8 9.8 0 0 0 3.6 17l-1.4 4.8 4.9-1.3A9.8 9.8 0 1 0 12 2.2zm0 17.9c-1.5 0-3-.4-4.2-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.1 8.1 0 1 1 12 20.1zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.2.3-.9.9-.9 2.2s1 2.6 1.1 2.7c.1.2 1.9 2.9 4.6 4.1 1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+  </svg>
 
   <a class="skip" href="#main">Skip to content</a>
 
@@ -22,7 +55,7 @@
     <div class="wrap topbar__inner">
       <p><span class="dot dot--live" aria-hidden="true"></span> Cash on delivery to 300+ cities</p>
       <p class="hide-sm">Open and inspect your parcel before you pay</p>
-      <p class="hide-sm mono">WhatsApp 0349 6658003</p>
+      <a class="hide-sm topbar__wa" href="https://wa.me/923496658003?text=Hi%20Hassan%20Tech%2C%20I%20have%20a%20question" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> WhatsApp 0349 6658003</a>
     </div>
   </div>
 
@@ -160,7 +193,7 @@
             </div>
             <img src="assets/products/np33.jpg" alt="" loading="lazy">
           </a>
-          <a class="tile tile--plain tile--wide tile--end" href="#shop" data-tile>
+          <a class="tile tile--plain tile--wide tile--end glass" href="#shop" data-tile>
             <div class="tile__text">
               <span class="tile__count mono">17 in stock</span>
               <h3>Mouse pads &amp; accessories</h3>
@@ -195,6 +228,41 @@
 
         <div class="products__more" data-reveal>
           <a class="btn btn--ghost" href="#shop">Browse all 200+ products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEYBOARD FINDER -->
+    <section class="section ambient" id="finder">
+      <div class="wrap">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">Keyboard finder</p>
+          <h2>Find your board in two taps.</h2>
+        </header>
+
+        <div class="finder glass" data-reveal>
+          <form class="finder__controls" id="finderForm">
+            <fieldset>
+              <legend>Your budget</legend>
+              <div class="chips">
+                <input type="radio" name="budget" id="b-low" value="0-10000"><label for="b-low">Under Rs 10k</label>
+                <input type="radio" name="budget" id="b-mid" value="10000-16000"><label for="b-mid">Rs 10k&ndash;16k</label>
+                <input type="radio" name="budget" id="b-high" value="16000-999999"><label for="b-high">Rs 16k+</label>
+                <input type="radio" name="budget" id="b-any" value="0-999999" checked><label for="b-any">Any</label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>What matters most</legend>
+              <div class="chips">
+                <input type="radio" name="need" id="n-gaming" value="gaming" checked><label for="n-gaming">Competitive gaming</label>
+                <input type="radio" name="need" id="n-wireless" value="wireless"><label for="n-wireless">Wireless</label>
+                <input type="radio" name="need" id="n-quiet" value="quiet"><label for="n-quiet">Quiet typing</label>
+                <input type="radio" name="need" id="n-looks" value="looks"><label for="n-looks">Looks &amp; screen</label>
+              </div>
+            </fieldset>
+            <p class="finder__help">Still unsure? <a href="https://wa.me/923496658003?text=Hi%2C%20can%20you%20help%20me%20choose%20a%20keyboard%3F%20My%20budget%20is%20" target="_blank" rel="noopener">Tell us what you play on WhatsApp</a> and we&rsquo;ll suggest a few.</p>
+          </form>
+          <div class="finder__results" id="finderResults" aria-live="polite"></div>
         </div>
       </div>
     </section>
@@ -251,25 +319,30 @@
               <span class="price__was mono">Rs 21,999</span>
               <span class="badge badge--deal mono">&minus;16%</span>
             </div>
-            <button class="btn btn--primary" type="button" data-add="AULA HERO 99 HE">Add to cart</button>
+            <div class="spotlight__actions">
+              <a class="btn btn--wa" href="https://wa.me/923496658003?text=Hi%2C%20is%20the%20AULA%20HERO%2099%20HE%20(Rs%2018%2C499)%20in%20stock%3F" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Ask on WhatsApp</a>
+              <button class="btn btn--primary" type="button" data-add="AULA HERO 99 HE">Add to cart</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- PRE-OWNED -->
-    <section class="section section--alt" id="preowned">
+    <section class="section section--alt ambient ambient--warm" id="preowned">
       <div class="wrap">
         <div class="preowned">
           <header class="preowned__intro" data-reveal>
             <p class="eyebrow">Open box &amp; pre-owned</p>
             <h2>Flagship gear at half the price.</h2>
-            <p>Every returned or pre-owned item is tested before it goes back on sale. Each listing tells you exactly what you&rsquo;re getting.</p>
-            <ul class="grades">
+            <p>Every listing states the exact condition and what&rsquo;s in the box, so you know what you&rsquo;re getting before you order.</p>
+            <ul class="grades glass">
               <li><span class="grade grade--a mono">Unused repack</span> Never used. Brown box instead of retail packaging.</li>
               <li><span class="grade grade--b mono">Open box</span> Slightly used, original box and accessories.</li>
               <li><span class="grade grade--c mono">10/10, no box</span> Used, no marks or faults. Item only.</li>
             </ul>
+            <a class="btn btn--wa" href="https://wa.me/923496658003?text=Hi%2C%20which%20open%20box%20or%20pre-owned%20items%20do%20you%20have%20right%20now%3F" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Ask what&rsquo;s in stock today</a>
+            <p class="muted small">Want to see the exact unit? Ask and we&rsquo;ll send photos on WhatsApp.</p>
           </header>
           <div class="deals" id="deals"></div>
         </div>
@@ -277,14 +350,14 @@
     </section>
 
     <!-- REAL DESK PHOTO + TRUST -->
-    <section class="section desk" id="trust">
+    <section class="section desk ambient" id="trust">
       <div class="wrap">
         <figure class="desk__photo" data-reveal>
           <img src="assets/products/l99.jpg" alt="AULA L99 keyboard with red translucent keycaps held over a table of mechanical keyboards in stock" loading="lazy" id="deskImg">
           <figcaption class="mono">Shot in store &middot; AULA L99 Blue Rain &middot; Rs 24,850</figcaption>
         </figure>
 
-        <ul class="trust">
+        <ul class="trust glass">
           <li data-trust>
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="13" height="10" rx="1"/><path d="M15 10h4l3 3v4h-7"/><circle cx="6.5" cy="18" r="1.8"/><circle cx="18" cy="18" r="1.8"/></svg>
             <h3>Cash on delivery</h3>
@@ -309,8 +382,39 @@
       </div>
     </section>
 
+    <!-- HOW ORDERING WORKS -->
+    <section class="section section--alt ambient" id="how">
+      <div class="wrap">
+        <header class="section__head" data-reveal>
+          <p class="eyebrow">How ordering works</p>
+          <h2>Order in a minute. Pay when it&rsquo;s in your hands.</h2>
+        </header>
+        <ol class="steps">
+          <li class="step glass" data-step>
+            <span class="step__n">1</span>
+            <h3>Pick your gear</h3>
+            <p>Add it to your cart, or send us the product name on WhatsApp.</p>
+          </li>
+          <li class="step glass" data-step>
+            <span class="step__n">2</span>
+            <h3>Share your address</h3>
+            <p>We confirm the price, stock and delivery to your city.</p>
+          </li>
+          <li class="step glass" data-step>
+            <span class="step__n">3</span>
+            <h3>Check it, then pay</h3>
+            <p>Open the parcel at your door. Pay the rider only when you&rsquo;re happy.</p>
+          </li>
+        </ol>
+        <div class="steps__cta" data-reveal>
+          <a class="btn btn--wa" href="https://wa.me/923496658003?text=Hi%2C%20I%27d%20like%20to%20place%20an%20order" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Order on WhatsApp</a>
+          <a class="btn btn--ghost" href="#shop">Browse the shop</a>
+        </div>
+      </div>
+    </section>
+
     <!-- GUIDES -->
-    <section class="section" id="guides">
+    <section class="section ambient" id="guides">
       <div class="wrap">
         <header class="section__head section__head--row" data-reveal>
           <div>
@@ -320,22 +424,22 @@
           <a class="link-arrow" href="https://hassantech.pk/blog/" target="_blank" rel="noopener">All guides</a>
         </header>
         <div class="guides">
-          <a class="guide" href="https://hassantech.pk/mechanical-gaming-keyboards-best-gaming-keyboard-guide-in-pakistan/" target="_blank" rel="noopener" data-guide>
+          <a class="guide glass" href="https://hassantech.pk/mechanical-gaming-keyboards-best-gaming-keyboard-guide-in-pakistan/" target="_blank" rel="noopener" data-guide>
             <span class="guide__meta mono">Keyboards &middot; 1 Jan 2026</span>
             <h3>Mechanical gaming keyboards: the buying guide for Pakistan</h3>
             <span class="guide__go" aria-hidden="true">Read</span>
           </a>
-          <a class="guide" href="https://hassantech.pk/gaming-headset-in-pakistan-complete-guide-for-immersive-audio-competitive-play/" target="_blank" rel="noopener" data-guide>
+          <a class="guide glass" href="https://hassantech.pk/gaming-headset-in-pakistan-complete-guide-for-immersive-audio-competitive-play/" target="_blank" rel="noopener" data-guide>
             <span class="guide__meta mono">Headsets &middot; 2 Jan 2026</span>
             <h3>Gaming headsets in Pakistan: immersive audio and competitive play</h3>
             <span class="guide__go" aria-hidden="true">Read</span>
           </a>
-          <a class="guide" href="https://hassantech.pk/gaming-mouse-in-pakistan/" target="_blank" rel="noopener" data-guide>
+          <a class="guide glass" href="https://hassantech.pk/gaming-mouse-in-pakistan/" target="_blank" rel="noopener" data-guide>
             <span class="guide__meta mono">Mice &middot; 3 Jan 2026</span>
             <h3>Choosing a gaming mouse in Pakistan: DPI, weight and sensors</h3>
             <span class="guide__go" aria-hidden="true">Read</span>
           </a>
-          <a class="guide" href="https://hassantech.pk/top-5-iems-for-gaming-in-pakistan/" target="_blank" rel="noopener" data-guide>
+          <a class="guide glass" href="https://hassantech.pk/top-5-iems-for-gaming-in-pakistan/" target="_blank" rel="noopener" data-guide>
             <span class="guide__meta mono">Audio &middot; 24 Sep 2025</span>
             <h3>Top 5 IEMs for gaming in Pakistan</h3>
             <span class="guide__go" aria-hidden="true">Read</span>
@@ -344,12 +448,55 @@
       </div>
     </section>
 
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap faq">
+        <header class="faq__intro" data-reveal>
+          <p class="eyebrow">Questions</p>
+          <h2>Before you order.</h2>
+          <div class="faq__card glass">
+            <p><strong>Didn&rsquo;t find your answer?</strong></p>
+            <p class="muted small">Message us and a real person replies.</p>
+            <a class="btn btn--wa" href="https://wa.me/923496658003?text=Hi%2C%20I%20have%20a%20question%20about%20an%20order" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Ask on WhatsApp</a>
+          </div>
+        </header>
+        <div class="faq__list" id="faqList">
+          <details class="qa" data-qa open>
+            <summary>Do you offer cash on delivery?</summary>
+            <div class="qa__a"><p>Yes. We deliver with cash on delivery to more than 300 cities in Pakistan, including Karachi, Lahore and Islamabad.</p></div>
+          </details>
+          <details class="qa" data-qa>
+            <summary>Can I check the product before I pay?</summary>
+            <div class="qa__a"><p>Yes. Open the parcel and inspect it in front of the rider. Pay only once you&rsquo;re happy with it.</p></div>
+          </details>
+          <details class="qa" data-qa>
+            <summary>How long does delivery take?</summary>
+            <div class="qa__a"><p>It depends on your city. Send your city on WhatsApp and we&rsquo;ll tell you when to expect it.</p></div>
+          </details>
+          <details class="qa" data-qa>
+            <summary>What do &ldquo;open box&rdquo; and &ldquo;10/10, no box&rdquo; mean?</summary>
+            <div class="qa__a"><p>Open box items are slightly used and come with their original box and accessories. &ldquo;10/10, no box&rdquo; means used with no marks or faults, sold as the item only. Unused repacks are new items in a plain brown box.</p></div>
+          </details>
+          <details class="qa" data-qa>
+            <summary>Is there a warranty?</summary>
+            <div class="qa__a"><p>Products are covered by our <a href="https://hassantech.pk/refund_returns/" target="_blank" rel="noopener">warranty and returns policy</a>. Terms vary by product, so ask us if you want to confirm before ordering.</p></div>
+          </details>
+          <details class="qa" data-qa>
+            <summary>Can you help me pick between two keyboards?</summary>
+            <div class="qa__a"><p>Yes. Send both names on WhatsApp with what you play and how much you type, and we&rsquo;ll tell you which one fits better.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta">
-      <div class="wrap cta__inner" data-reveal>
+      <div class="wrap">
+      <div class="cta__inner cta__panel glass" data-reveal>
         <h2>Need help picking a switch?</h2>
         <p>Message us on WhatsApp with your budget and what you play. We reply with two or three options that fit.</p>
-        <a class="btn btn--primary" href="https://wa.me/923496658003" target="_blank" rel="noopener">Chat on WhatsApp &middot; <span class="mono">0349 6658003</span></a>
+        <a class="btn btn--wa" href="https://wa.me/923496658003?text=Hi%2C%20can%20you%20help%20me%20pick%20a%20keyboard%3F" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp &middot; <span class="mono">0349 6658003</span></a>
+      </div>
       </div>
     </section>
   </main>
@@ -379,7 +526,7 @@
         <h4>Talk to us</h4>
         <p class="mono">0349 6658003</p>
         <p class="mono">Ohyeshassan@gmail.com</p>
-        <p class="muted small">Calls and WhatsApp, every day.</p>
+        <a class="footer__wa" href="https://wa.me/923496658003" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg> Chat on WhatsApp</a>
       </div>
     </div>
     <div class="wrap footer__base">
@@ -388,8 +535,9 @@
     </div>
   </footer>
 
-  <a class="wa-float" href="https://wa.me/923496658003" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8.8 8.6c.2-.5.4-.5.7-.5h.5c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.1-.2.3 0 .5.4.7 1 1.4 1.7 1.9.4.3.8.5 1.2.7.2.1.4 0 .5-.1l.6-.7c.1-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.4 0 .4-.1 1-.6 1.4-.4.4-1.2.7-1.9.6-1-.2-2.4-.7-3.7-1.9-1.4-1.2-2.2-2.7-2.4-3.5-.2-.8.1-1.4.4-1.7z" fill="currentColor" stroke="none"/></svg>
+  <a class="wa-float" href="https://wa.me/923496658003?text=Hi%20Hassan%20Tech" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="wa-float__label" id="waLabel">Chat with us</span>
+    <span class="wa-float__btn"><svg class="ico" aria-hidden="true"><use href="#i-wa"/></svg></span>
   </a>
 
   <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
